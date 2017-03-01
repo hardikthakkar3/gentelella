@@ -1,0 +1,26 @@
+body{
+    color: #6d6d6d;
+}
+.left_col, .nav_title, .nav.side-menu>li.active>a {
+    background: #11593f;
+}
+.site_title{
+    font-size: 18px;
+    text-align: center;
+}
+.nav-md ul.nav.child_menu li:before{
+    background: #0d9061;
+}
+.nav-md ul.nav.child_menu li:after{
+    border-left: 1px solid #0d9061;
+}
+.toggle a, h2{
+    color: #2d8464;
+}
+.table>thead>tr>th{
+    border-bottom: 2px solid #11593f;
+}
+.companyTitle{
+    font-size: 30px;
+    padding: 10px;
+}
