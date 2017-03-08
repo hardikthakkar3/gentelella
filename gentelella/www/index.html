@@ -14,9 +14,12 @@
   <link href="css/custom.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
+  <script src="js/angular.min.js"></script>
+
+
 </head>
 
-<body class="nav-md">
+<body class="nav-md" ng-app="app">
 
 <div class="container body">
 
@@ -94,7 +97,7 @@
     <!-- /top navigation -->
 
     <!-- page content -->
-    <div class="right_col" role="main">
+    <div class="right_col" role="main" ng-controller="mainController" ng-show="dataAvailable">
 
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -118,23 +121,19 @@
                 <tbody>
                 <tr>
                   <td>Street Address</td>
-                  <td>1 New Orchard Rd</td>
+                  <td>{{data["company-response"]["company-basics"].profile.location.addr1}}, {{data["company-response"]["company-basics"].profile.location.addr2}}</td>
                 </tr>
                 <tr>
                   <td>City</td>
-                  <td>Armonk</td>
+                  <td>{{data["company-response"]["company-basics"].profile.location.city}}</td>
                 </tr>
                 <tr>
                   <td>State / Region</td>
-                  <td>NY</td>
+                  <td>{{data["company-response"]["company-basics"].profile.location.state}}</td>
                 </tr>
                 <tr>
-                  <td>Street Address</td>
-                  <td>1 New Orchard Rd</td>
-                </tr>
-                <tr>
-                  <td>City</td>
-                  <td>Armonk</td>
+                  <td>Zip</td>
+                  <td>{{data["company-response"]["company-basics"].profile.location.zip}}</td>
                 </tr>
                 </tbody>
               </table>
@@ -312,6 +311,18 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/custom.min.js"></script>
 <script src="js/Chart.min.js"></script>
+<script>
+angular.module('app', [])
 
+.controller('mainController', function($scope, $http) {
+    $scope.dataAvailable = false;
+    //var url = "http://viewer.qa.infodesk.com/bi-service/service/json/company/FRDMO:FCODE?content=fdk:basics";
+    var url = "basics.json";
+    $http.get(url).then(function(response) {
+        $scope.data = response.data;
+        $scope.dataAvailable = true;
+    });
+});
+</script>
 </body>
 </html>

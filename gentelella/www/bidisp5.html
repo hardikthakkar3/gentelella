@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+	
+    parent website content<br></br>
+	
+    <div id="searchFieldContainer"></div><br>
+
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+    <script>
+      var inputField = "<input placeholder='Enter Search Query' id='searchQuery' type='search' onkeyup='search()' /><button onclick='search()'>Search</button><div id='searchResults'></div>";
+      document.getElementById("searchFieldContainer").innerHTML = inputField;
+
+      function search(){
+        var query = document.getElementById("searchQuery").value;
+        if(query){
+          //var url = 'http://viewer.dev.infodesk.com/bi-service/service/json/suggestion/'+query;
+          var url = 'response.json';
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {          
+               response(JSON.parse(xhttp.responseText));
+            }
+          };
+          xhttp.open("GET", url, true);
+          xhttp.setRequestHeader('Content-Type', 'application/json')
+          xhttp.send();
+        }  else {
+            document.getElementById("searchResults").innerHTML = "";
+        }
+      }
+      function response(data) {
+        var results = "";
+        if(data["company-response"].status == "success"){
+           var entity = data["company-response"]["company-search"].entity;
+          for(var i in entity){
+            console.log(entity[i]);
+            results = results + "<li onclick='resultClicked(\""+entity[i].fcode+"\")'>"+entity[i].name+" ("+entity[i].fcode+")</li>"
+          }
+          if(!results){results = "<li>No Results Found</li>";}
+          document.getElementById("searchResults").innerHTML = results;
+        }else{
+            document.getElementById("searchResults").innerHTML = data["company-response"].message;
+        }
+
+      }
+      function resultClicked(id){
+         window.open("http://local.dev.infodesk.com:8080/bi-display/bidisplay?snapshot="+id+"&page=home&template=bcg&output=html", "_blank");
+          document.getElementById("searchResults").innerHTML = "";
+      }
+
+      </script>
+    <style>
+        #searchQuery{
+            width: 90%;
+        }
+        #searchResults{
+            position: absolute;
+            width: 100%;
+            background: #FFF;
+            /*border: 1px solid blue;*/
+            list-style: none;
+            max-height: 220px;
+            overflow: scroll;
+        }
+        #searchResults li{
+            border-bottom: 1px solid blue;
+            line-height: 30px;
+            padding: 5px;
+        }
+    </style>
+</body>
+</html>
