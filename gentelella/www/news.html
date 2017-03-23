@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Company Snapshot</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/custom.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <script src="js/angular.min.js"></script>
+  <script>
+      angular.module('app', [])
+          .controller('mainController', function($scope, $http) {
+              $scope.dataAvailable = false;
+              var biDisplayURL = "";//CHETAN'S LOCAL MACHINE
+              var url = biDisplayURL + "news.json?page=1";
+              $http.get(url).then(function(response) {
+                  $scope.news = response.data.data;
+                  $scope.dataAvailable = true;
+              });
+              $scope.page = 1;
+              $scope.maxPage = 4;
+              $scope.totalResults = 100;
+              $(".paginationCustom li").click(function () {
+                  $(".paginationCustom li").removeClass("active")
+
+                  var value = $(this).attr("value");
+                  if(value == "next"){
+                      $scope.page = $scope.page + 1;
+                  }else if(value == "previous"){
+                      $scope.page = $scope.page - 1;
+                  }else {
+                      $scope.page = parseInt(value);
+                  }
+                  if($scope.page < 1){
+                      $scope.page = 1;
+                  }
+                  if($scope.page > $scope.maxPage){
+                      $scope.page = $scope.maxPage;
+                  }
+                  $(".paginationCustom li[value='"+$scope.page+"']").addClass("active");
+                  var url = biDisplayURL + "news.json?page="+$scope.page;
+                  $http.get(url).then(function(response) {
+                      $scope.news = response.data.data;
+                      $scope.dataAvailable = true;
+                  });
+              });
+          });
+  </script>
+
+</head>
+
+<body class="nav-md" ng-app="app">
+
+<div class="container body">
+
+  <div class="main_container">
+
+    <div class="col-md-3 left_col menu_fixed">
+
+      <div class="left_col scroll-view">
+
+        <div class="navbar nav_title" style="border: 0;">
+          <a href="index.html" class="site_title"><span>Company<b>Snapshot</b></span></a>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+          <div class="menu_section">
+            <ul class="nav side-menu">
+              <li><a href="index.html"><i class="fa fa-briefcase"></i> Company Basics</a></li>
+              <li><a><i class="fa fa-user"></i> Management <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="#">Board of Directors</a></li>
+                  <li><a href="#">Management Team</a></li>
+                  <li><a href="#">Key Personnel</a></li>
+                </ul>
+              </li>
+              <li class="active"><a><i class="fa fa-file-text-o"></i> News <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu" style="display: block;">
+                  <li class="active"><a href="#">All Major News</a></li>
+                  <li><a href="#">Key Developments</a></li>
+                  <li><a href="#">M&A</a></li>
+                  <li><a href="#">Strategy</a></li>
+                  <li><a href="#">Executive Changes</a></li>
+                  <li><a href="#">Marketing</a></li>
+                  <li><a href="#">Financial</a></li>
+                  <li><a href="#">Financings</a></li>
+                  <li><a href="#">Legal</a></li>
+                </ul>
+              </li>
+              <li><a><i class="fa fa-bar-chart"></i> Analyst Reports</a></li>
+              <li><a><i class="fa fa-usd"></i> Financial Statements <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="#">Balance Sheet Statement</a></li>
+                  <li><a href="#">Income Statement</a></li>
+                  <li><a href="#">Cash Flow Statement</a></li>
+                </ul>
+              </li>
+              <li><a><i class="fa fa-pie-chart"></i>Estimates</a></li>
+              <li><a><i class="fa fa-trophy"></i>Competitors</a></li>
+              <li><a><i class="fa fa-search"></i>Search New Company</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- /sidebar menu -->
+      </div>
+    </div>
+
+    <!-- top navigation -->
+    <div class="top_nav">
+      <div class="nav_menu">
+        <nav>
+          <div class="nav toggle">
+            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+          </div>
+          <div class="nav">
+            <img style="height: 50px;padding:10px;" src="http://www.infodesk.com/hs-fs/hubfs/infodesk_clr_notagline.png?t=1488295377133&width=268&name=infodesk_clr_notagline.png"/>
+            <button type="button" class="btn btn-default" style="float: right;margin: 10px;">
+              Export PDF
+            </button>
+          </div>
+
+        </nav>
+      </div>
+    </div>
+    <!-- /top navigation -->
+
+    <!-- page content -->
+    <div class="right_col newsPage" role="main" ng-controller="mainController">
+
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <h2 class="companyTitle">Infodesk India Pvt Ltd</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>All Major News</h2>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+              <table id="newsTable" class="table">
+                <tbody>
+                <tr style="border-bottom: 1px solid lightgray;">
+                  <td colspan="2">
+                    <span>Showing {{page*25 - 24}} to {{page*25 - 25 + news.length}} of {{totalResults}} results</span>
+                    <ul class="paginationCustom">
+                      <li value="previous"><a href="#">Previous</a></li>
+                      <li class="active" value="1"><a href="#">1</a></li>
+                      <li value="2"><a href="#">2</a></li>
+                      <li value="3"><a href="#">3</a></li>
+                      <li value="4"><a href="#">4</a></li>
+                      <li value="next"><a href="#">Next</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                  <tr>
+                    <td>
+                      <table>
+                        <tr ng-repeat="article in news">
+                          <td style="padding-right: 10px;vertical-align: top;color: #0d9061;font-weight: bold;">
+                            {{page*25 - 24 + $index}}
+                          </td>
+                          <td>
+                            <table>
+                              <tr style="font-size: 14px;font-weight: bold;"><td style="padding-bottom: 3px;">
+                                <a href="https://www.google.com" target="_blank">{{article.title}}</a>
+                              </td></tr>
+                              <tr style="font-size: 12px;"><td style="padding-bottom: 3px;">
+                                {{article.line21}} <span style="color: #0d9061">/</span> {{article.line22}} <span style="color: #0d9061">/</span> {{article.line23}} <span style="color: #0d9061">/</span> {{article.line24}}
+                              </td></tr>
+                              <tr style="font-size: 13px;"><td class="newsDescription">
+                                {{article.line3}}
+                              </td></tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- /page content -->
+
+  <!-- footer content -->
+  <footer class="">
+    <div class="pull-left">
+      <div>The source provided herein are licensed for enterprise use and can be distributed internally.
+        Content cannot be distributed externally, but limited portions can be used in analysis and presentations provided to clients.</div>
+      <div><img style="width: 130px;padding:10px 0;" src="http://www.infodesk.com/hs-fs/hubfs/infodesk_clr_notagline.png?t=1488295377133&width=268&name=infodesk_clr_notagline.png"/> </div>
+      <div>Copyright 2017 Infodesk. All rights reserved.</div>
+    </div>
+    <div class="clearfix"></div>
+  </footer>
+  <!-- /footer content -->
+</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.min.js"></script>
+<script src="js/Chart.min.js"></script>
+</body>
+</html>

@@ -1,77 +1,94 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-</head>
+<head></head>
 <body>
-	
-    parent website content<br></br>
-	
-    <div id="searchFieldContainer"></div><br>
 
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    <div>parent website content</div>
 
+    <!--This div is needed in client's website-->
+    <div id="searchFieldContainer"></div>
+    <!---->
+
+    <div>parent website content</div>
+
+    <!--Our content to be inserted in their website-->
+    <!--autocomplete plugin built using pure javascript. Both of the files should be hosted on CDN-->
+    <link rel="stylesheet" href="auto-complete.css">
+    <script src="auto-complete.js"></script>
     <script>
-      var inputField = "<input placeholder='Enter Search Query' id='searchQuery' type='search' onkeyup='search()' /><button onclick='search()'>Search</button><div id='searchResults'></div>";
-      document.getElementById("searchFieldContainer").innerHTML = inputField;
-
-      function search(){
-        var query = document.getElementById("searchQuery").value;
-        if(query){
-          //var url = 'http://viewer.dev.infodesk.com/bi-service/service/json/suggestion/'+query;
-          var url = 'response.json';
-          var xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {          
-               response(JSON.parse(xhttp.responseText));
+        var biServiceURL = "http://viewer.dev.infodesk.com/bi-service/service/json/call/dj_suggestion_company/searchText={searchText}&maxResults=10&filterNewsCoded=true&dataSet=newsCodedAbt&filterADR=false&filterPrivate=true&format=json&suggestContext";//DEV
+        //var biServiceURL = "http://viewer.qa.infodesk.com/bi-service/service/json/call/dj_suggestion_company/searchText={searchText}&maxResults=10&filterNewsCoded=true&dataSet=newsCodedAbt&filterADR=false&filterPrivate=true&format=json&suggestContext";//QA
+        //var biServiceURL = "http://viewer.infodesk.com/bi-service/service/json/call/dj_suggestion_company/searchText={searchText}&maxResults=10&filterNewsCoded=true&dataSet=newsCodedAbt&filterADR=false&filterPrivate=true&format=json&suggestContext";//PRODUCTION
+        var biDisplayURL = "http://viewer.dev.infodesk.com/bi-display/";//DEV
+        var inputField = "<input placeholder='Enter Search Query' name='biDisplaySearchQuery' id='searchQuery' onkeyup='searchQueryChange(this)'/>";
+        document.getElementById("searchFieldContainer").innerHTML = inputField;
+        function searchQueryChange(element) {
+            if(element.value.length <= 3){
+                document.getElementById("searchQuery").style.background = "url('http://i47.tinypic.com/r02vbq.png') no-repeat right";
             }
-          };
-          xhttp.open("GET", url, true);
-          xhttp.setRequestHeader('Content-Type', 'application/json')
-          xhttp.send();
-        }  else {
-            document.getElementById("searchResults").innerHTML = "";
         }
-      }
-      function response(data) {
-        var results = "";
-        if(data["company-response"].status == "success"){
-           var entity = data["company-response"]["company-search"].entity;
-          for(var i in entity){
-            console.log(entity[i]);
-            results = results + "<li onclick='resultClicked(\""+entity[i].fcode+"\")'>"+entity[i].name+" ("+entity[i].fcode+")</li>"
-          }
-          if(!results){results = "<li>No Results Found</li>";}
-          document.getElementById("searchResults").innerHTML = results;
-        }else{
-            document.getElementById("searchResults").innerHTML = data["company-response"].message;
-        }
-
-      }
-      function resultClicked(id){
-         window.open("http://local.dev.infodesk.com:8080/bi-display/bidisplay?snapshot="+id+"&page=home&template=bcg&output=html", "_blank");
-          document.getElementById("searchResults").innerHTML = "";
-      }
-
-      </script>
+        new autoComplete({
+            selector: "input[name='biDisplaySearchQuery']",
+            minChars: 3,
+            source: function (term, suggest) {
+                term = term.toLowerCase();
+                console.log(term)
+                var url = biServiceURL.replace("{searchText}",term);
+                //var url = "response.json".replace("{searchText}",term);
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var data = JSON.parse(xhttp.responseText)
+                        var choices = data.company;
+                        if(choices){
+                            suggest(choices);
+                        }else {
+                            suggest([])
+                        }
+                        document.getElementById("searchQuery").style.background = "url('http://i47.tinypic.com/r02vbq.png') no-repeat right";
+                    }else if(this.status != 200){
+                        document.getElementById("searchQuery").style.background = "url('http://i47.tinypic.com/r02vbq.png') no-repeat right";
+                    }
+                };
+                xhttp.open("GET", url, true);
+                xhttp.setRequestHeader('Content-Type', 'application/json')
+                xhttp.send();
+                document.getElementById("searchQuery").style.background = "url('https://d1ekrxlws13em5.cloudfront.net/media/images/mobile/ajax-loader.gif') no-repeat right";
+            },
+            renderItem: function (item, search) {
+                return '<div class="autocomplete-suggestion" code="' + item.code + '"  data-val="' + item.value + ' (' + item.code + ')">' + item.value + ' (' + item.code + ')</div>';
+            },
+            onSelect: function (e, term, item) {
+                window.open(biDisplayURL+"snapshot?q=" + item.getAttribute('code') + ":FCODE&snapshot=idsk&page=home&template=bcg&output=html", "_blank");
+            }
+        });
+    </script>
     <style>
-        #searchQuery{
-            width: 90%;
+        #searchFieldContainer {
+            padding: 10px;
         }
-        #searchResults{
-            position: absolute;
-            width: 100%;
-            background: #FFF;
-            /*border: 1px solid blue;*/
-            list-style: none;
-            max-height: 220px;
-            overflow: scroll;
-        }
-        #searchResults li{
-            border-bottom: 1px solid blue;
+        #searchQuery {
+            width: 185px;
             line-height: 30px;
-            padding: 5px;
+            font-size: 12px;
+            padding-right: 55px;
+            padding-left: 10px;
+            background: url('http://i47.tinypic.com/r02vbq.png') no-repeat right;
+        }
+        .autocomplete-suggestion {
+            color: #5d75d2;
+            line-height: 30px;
+            font-size: 12px;
+            border-bottom: 1px solid lightgray;
+            margin: 5px;
+            word-wrap: break-word;
+            white-space: normal;
+            overflow: auto;
+        }
+        .autocomplete-suggestions {
+
         }
     </style>
+    <!--Our content ends-->
 </body>
 </html>

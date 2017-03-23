@@ -15,7 +15,20 @@
   <link href="css/style.css" rel="stylesheet">
 
   <script src="js/angular.min.js"></script>
-
+    <script>
+        angular.module('app', [])
+            .controller('mainController', function($scope, $http) {
+                $scope.dataAvailable = false;
+//                var biDisplayURL = "http://viewer.dev.infodesk.com/bi-display/";//DEV
+//                var biDisplayURL = "http://viewer.qa.infodesk.com/bi-display/";//QA
+                var biDisplayURL = "http://192.168.0.6:8080/bi-display/";//CHETAN'S LOCAL MACHINE
+                var url = biDisplayURL + "datapoint/json?q=FRDMO:FCODE&content=fdk:basics";
+                $http.get(url).then(function(response) {
+                    $scope.data = response.data;
+                    $scope.dataAvailable = true;
+                });
+            });
+    </script>
 
 </head>
 
@@ -39,8 +52,8 @@
         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
           <div class="menu_section">
             <ul class="nav side-menu">
-              <li><a href="index.html"><i class="fa fa-home"></i> Company Basics</a></li>
-              <li><a><i class="fa fa-home"></i> News <span class="fa fa-chevron-down"></span></a>
+              <li><a href="index.html"><i class="fa fa-briefcase"></i> Company Basics</a></li>
+              <li><a><i class="fa fa-file-text-o"></i> News <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                   <li><a href="#">All Major News</a></li>
                   <li><a href="#">Signals / Key Developments</a></li>
@@ -54,15 +67,15 @@
                   <li><a href="#">Foreign Language</a></li>
                 </ul>
               </li>
-              <li><a><i class="fa fa-home"></i> Competitors</a></li>
-              <li><a><i class="fa fa-bug"></i> Management <span class="fa fa-chevron-down"></span></a>
+              <li><a><i class="fa fa-trophy"></i> Competitors</a></li>
+              <li><a><i class="fa fa-user"></i> Management <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                   <li><a href="#">Board of Directors</a></li>
                   <li><a href="#">Management Team</a></li>
                   <li><a href="#">Key Personnel</a></li>
                 </ul>
               </li>
-              <li><a><i class="fa fa-bug"></i> Financial Statements <span class="fa fa-chevron-down"></span></a>
+              <li><a><i class="fa fa-usd"></i> Financial Statements <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                   <li><a href="#">Balance Sheet Statement</a></li>
                   <li><a href="#">Income Statement</a></li>
@@ -70,8 +83,8 @@
                 </ul>
               </li>
               <li><a><i class="fa fa-home"></i> Ratios</a></li>
-              <li><a><i class="fa fa-home"></i> Estimates: Consensus</a></li>
-              <li><a><i class="fa fa-home"></i> Analyst Reports</a></li>
+              <li><a><i class="fa fa-pie-chart"></i> Estimates: Consensus</a></li>
+              <li><a><i class="fa fa-bar-chart"></i> Analyst Reports</a></li>
             </ul>
           </div>
 
@@ -97,7 +110,7 @@
     <!-- /top navigation -->
 
     <!-- page content -->
-    <div class="right_col" role="main" ng-controller="mainController" ng-show="dataAvailable">
+    <div class="right_col" role="main" ng-controller="mainController">
 
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -106,7 +119,12 @@
       </div>
 
       <div class="row">
-        <div class="col-md-8 col-sm-8 col-xs-12">
+        <div class="col-md-8 col-sm-8 col-xs-12" ng-show="!dataAvailable">
+          <div style="position:absolute;width:100%;height:100%;">
+              <img src="loading.gif" style="display: block;margin: 0 auto;padding: 50px;"/>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-12" ng-cloak ng-show="dataAvailable">
           <div class="x_panel">
             <div class="x_content">
               <table class="table">
@@ -140,7 +158,6 @@
 
             </div>
           </div>
-
         </div>
         <div class="col-md-4 col-sm-4 col-xs-12">
           <div class="x_panel">
@@ -311,18 +328,5 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/custom.min.js"></script>
 <script src="js/Chart.min.js"></script>
-<script>
-angular.module('app', [])
-
-.controller('mainController', function($scope, $http) {
-    $scope.dataAvailable = false;
-    //var url = "http://viewer.qa.infodesk.com/bi-service/service/json/company/FRDMO:FCODE?content=fdk:basics";
-    var url = "basics.json";
-    $http.get(url).then(function(response) {
-        $scope.data = response.data;
-        $scope.dataAvailable = true;
-    });
-});
-</script>
 </body>
 </html>

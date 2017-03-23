@@ -24,3 +24,41 @@ body{
     font-size: 30px;
     padding: 10px;
 }
+.x_title{
+    border-bottom: 2px solid orange;
+}
+
+.newsPage .table > tbody > tr > td {
+    border:none;
+}
+.newsPage td span{
+    line-height: 0;
+}
+.newsPage a{
+    color: #0d9061;
+}
+.newsDescription{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.paginationCustom{
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+.paginationCustom li{
+    display: inline;
+}
+.paginationCustom li a{
+    color: black;
+}
+.paginationCustom li.active a{
+    color: #0d9061;
+    text-decoration: underline;
+}
+.paginationCustom a{
+    padding: 6px 6px!important;
+}
