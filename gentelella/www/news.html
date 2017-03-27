@@ -19,22 +19,34 @@
       angular.module('app', [])
           .controller('mainController', function($scope, $http) {
               $scope.dataAvailable = false;
-              var biDisplayURL = "";//CHETAN'S LOCAL MACHINE
-              var url = biDisplayURL + "news.json?page=1";
-              $http.get(url).then(function(response) {
-                  $scope.news = response.data["company-response"]["news-headlines"].results.result;
-                  $scope.totalResults = response.data["company-response"]["news-headlines"].search.hits;
-                  $scope.dataAvailable = true;
-              });
+              $scope.count = 25;
+              $scope.newsTypes = ["latest", "swot"];
               $scope.page = 1;
-              $scope.maxPage = 4;
+              $scope.context = "";
+              $scope.biDisplayURL = "http://viewer.dev.infodesk.com/bi-service/service/json/company/" +
+                  "MCROST:FCODE?content=fdk:news" +
+                  "&news=" + $scope.newsTypes.join(",") +
+                  "&count=" + $scope.count +
+                  "&first={first}&" +
+                  "context={context}";//CHETAN'S LOCAL MACHINE
+              $scope.biDisplayURL = "news.json";
+              $scope.getNews = function () {
+                  $scope.dataAvailable = false;
+                  $http.get($scope.biDisplayURL.replace("{first}",($scope.page*$scope.count)).replace("{context}",$scope.context)).then(function(response) {
+                      $scope.news = response.data["company-response"]["news-headlines"].results.result;
+                      $scope.totalResults = response.data["company-response"]["news-headlines"].search.hits;
+                      $scope.context = response.data["company-response"]["news-headlines"].search.context;
+                      $scope.maxPage =  Math.ceil(parseInt($scope.totalResults)/$scope.count);
+                      $scope.dataAvailable = true;
+                  });
+              };
               $(".paginationCustom li").click(function () {
                   $(".paginationCustom li").removeClass("active")
-
                   var value = $(this).attr("value");
-                  if(value == "next"){
+                  console.log(value);
+                  if(value.toLowerCase() == "next"){
                       $scope.page = $scope.page + 1;
-                  }else if(value == "previous"){
+                  }else if(value.toLowerCase() == "previous"){
                       $scope.page = $scope.page - 1;
                   }else {
                       $scope.page = parseInt(value);
@@ -46,12 +58,10 @@
                       $scope.page = $scope.maxPage;
                   }
                   $(".paginationCustom li[value='"+$scope.page+"']").addClass("active");
-                  var url = biDisplayURL + "news.json?page="+$scope.page;
-                  $http.get(url).then(function(response) {
-                      $scope.news = response.data.data;
-                      $scope.dataAvailable = true;
-                  });
+                  $scope.url = $scope.biDisplayURL + "news.json?page="+$scope.page;
+                  $scope.getNews();
               });
+              $scope.getNews();
           });
   </script>
 
@@ -145,19 +155,22 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" ng-cloak>
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="x_panel">
             <div class="x_title">
               <h2>All Major News</h2>
               <div class="clearfix"></div>
             </div>
-            <div class="x_content">
-              <table id="newsTable" class="table">
+            <div class="x_content" style="min-height: 150px;">
+                <div style="position:absolute;width:100%;height:100%;" ng-hide="dataAvailable">
+                    <img src="loading.gif" style="display: block;margin: 0 auto;padding: 50px;"/>
+                </div>
+              <table id="newsTable" class="table" ng-show="dataAvailable">
                 <tbody>
                 <tr style="border-bottom: 1px solid lightgray;">
                   <td colspan="2">
-                    <span>Showing {{page*25 - 24}} to {{page*25 - 25 + news.length}} of {{totalResults}} results</span>
+                    <span>Showing {{(page-1)*count + 1}} to {{(page-1)*count + news.length}} of {{totalResults}} results</span>
                     <ul class="paginationCustom">
                       <li value="previous"><a href="#">Previous</a></li>
                       <li class="active" value="1"><a href="#">1</a></li>

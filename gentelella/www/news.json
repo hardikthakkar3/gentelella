@@ -2,7 +2,7 @@
   "company-response": {
     "news-headlines": {
       "search": {
-        "hits": 3945,
+        "hits": 394,
         "query": "((fds=MCROST and ns=(nrgn and ccat)) or (fds=MCROST not ns=nrgn)) not rst=(tqpr or ttrd) and (date after -91) AND (la=en)",
         "count": 25,
         "context": "15462|PHN0cnVjdHVyZWRTZWFyY2g+PHF1ZXJ5Pjxjb2xsZWN0aW9uPlB1YmxpY2F0aW9uczwvY29sbGVjdGlvbj48c2VhcmNoU3RyaW5nIG1vZGU9InRyYWRpdGlvbmFsIj4oKGZkcz1NQ1JPU1QgYW5kIG5zPShucmduIGFuZCBjY2F0KSkgb3IgKGZkcz1NQ1JPU1Qgbm90IG5zPW5yZ24pKSBub3QgcnN0PSh0cXByIG9yIHR0cmQpIGFuZCAoZGF0ZSBhZnRlciAtOTEpIEFORCAobGE9ZW4pPC9zZWFyY2hTdHJpbmc+PGRhdGVzIGZvcm1hdD0iTU1ERENDWVkiPjxhZnRlcj4tOTE8L2FmdGVyPjwvZGF0ZXM+PC9xdWVyeT48bGluZ3Vpc3RpY3MgLz48Zm9ybWF0dGluZz48ZGVkdXBsaWNhdGlvbk1vZGU+TmVhckV4YWN0PC9kZWR1cGxpY2F0aW9uTW9kZT48c29ydE9yZGVyPlB1YmxpY2F0aW9uRGF0ZVJldmVyc2VDaHJvbm9sb2dpY2FsPC9zb3J0T3JkZXI+PC9mb3JtYXR0aW5nPjwvc3RydWN0dXJlZFNlYXJjaD48bmF2aWdhdGlvbkNvbnRyb2w+PC9uYXZpZ2F0aW9uQ29udHJvbD4="
