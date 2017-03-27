@@ -33,7 +33,7 @@
             source: function (term, suggest) {
                 term = term.toLowerCase();
                 console.log(term)
-                var url = biServiceURL.replace("{searchText}",term);
+                var url = biDisplayURL + "suggestions?searchText="+term;
                 //var url = "response.json".replace("{searchText}",term);
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
