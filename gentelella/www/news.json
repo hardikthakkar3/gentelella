@@ -1,204 +1,424 @@
 {
-  "data": [
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
+  "company-response": {
+    "news-headlines": {
+      "search": {
+        "hits": 3945,
+        "query": "((fds=MCROST and ns=(nrgn and ccat)) or (fds=MCROST not ns=nrgn)) not rst=(tqpr or ttrd) and (date after -91) AND (la=en)",
+        "count": 25,
+        "context": "15462|PHN0cnVjdHVyZWRTZWFyY2g+PHF1ZXJ5Pjxjb2xsZWN0aW9uPlB1YmxpY2F0aW9uczwvY29sbGVjdGlvbj48c2VhcmNoU3RyaW5nIG1vZGU9InRyYWRpdGlvbmFsIj4oKGZkcz1NQ1JPU1QgYW5kIG5zPShucmduIGFuZCBjY2F0KSkgb3IgKGZkcz1NQ1JPU1Qgbm90IG5zPW5yZ24pKSBub3QgcnN0PSh0cXByIG9yIHR0cmQpIGFuZCAoZGF0ZSBhZnRlciAtOTEpIEFORCAobGE9ZW4pPC9zZWFyY2hTdHJpbmc+PGRhdGVzIGZvcm1hdD0iTU1ERENDWVkiPjxhZnRlcj4tOTE8L2FmdGVyPjwvZGF0ZXM+PC9xdWVyeT48bGluZ3Vpc3RpY3MgLz48Zm9ybWF0dGluZz48ZGVkdXBsaWNhdGlvbk1vZGU+TmVhckV4YWN0PC9kZWR1cGxpY2F0aW9uTW9kZT48c29ydE9yZGVyPlB1YmxpY2F0aW9uRGF0ZVJldmVyc2VDaHJvbm9sb2dpY2FsPC9zb3J0T3JkZXI+PC9mb3JtYXR0aW5nPjwvc3RydWN0dXJlZFNlYXJjaD48bmF2aWdhdGlvbkNvbnRyb2w+PC9uYXZpZ2F0aW9uQ29udHJvbD4="
+      },
+      "version": "1.0.0",
+      "results": {
+        "result": [
+          {
+            "summary": "LinkedIn has transformed professional networking since its launch in 2003, but just imagine if it had been around in the days of Leonardo da Vinci. Now imagine if the painter, sculptor and inventor described himself as a \"detail-oriented ...",
+            "publication-date": "2017-03-27",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 519,
+            "id": "TWFHVA0020170327ed3r00005",
+            "source": {
+              "code": "twfhva",
+              "content": "24 hours Vancouver"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=TWFHVA0020170327ed3r00005",
+            "headline": "Banish Buzzwords From Your Profile; Show real examples of your work"
+          },
+          {
+            "summary": "They know now they should have seen it coming.The eight friends from Marist College's Alpha Sigma Tau sorority are all daily viewers of The Ellen Degeneres Show who have many times witnessed the host's penchant for surprises. But when a ...",
+            "publication-date": "2017-03-27",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 767,
+            "id": "PGHK000020170327ed3r0002u",
+            "source": {
+              "code": "pghk",
+              "content": "Poughkeepsie Journal"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=PGHK000020170327ed3r0002u",
+            "headline": "Marist students recount surprise TV appearance; They've been a bit preoccupied since being on \"Ellen\""
+          },
+          {
+            "summary": "Dmytro Shymkiv, the deputy head of the Presidential Administration of Ukraine, has declared UAH 117,373 of dividends from the Microsoft Corporation.",
+            "publication-date": "2017-03-27",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 159,
+            "id": "UKRNEW0020170327ed3r001p5",
+            "source": {
+              "code": "ukrnew",
+              "content": "Ukrainian News"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=UKRNEW0020170327ed3r001p5",
+            "headline": "Presidential Administration Deputy Head Shymkiv Declares UAH 117,400 Of Dividends From Microsoft"
+          },
+          {
+            "summary": "LinkedIn has transformed professional networking since its launch in 2003, but just imagine if it had been around in the days of Leonardo da Vinci. Now imagine if the painter, sculptor and inventor described himself as a \"detail-oriented ...",
+            "publication-date": "2017-03-27",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 514,
+            "id": "TWFHTO0020170327ed3r00009",
+            "source": {
+              "code": "twfhto",
+              "content": "24 hours Toronto"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=TWFHTO0020170327ed3r00009",
+            "headline": "Show real examples of your work; When jobsearching this summer, banish buzzwords from your profile"
+          },
+          {
+            "summary": "MOSCOW, Mar 27 (PRIME) -- The Russian central bank has signed a 3.3 billion ruble contract to buy software from Microsoft, the biggest purchase of the U.S. giant\u2019s programs for the state in the last three years, business daily Vedomosti ...",
+            "publication-time": "01:39:24-0500",
+            "publication-date": "2017-03-27",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 211,
+            "id": "PRTASS0020170327ed3r0005l",
+            "source": {
+              "code": "prtass",
+              "content": "Prime News"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=PRTASS0020170327ed3r0005l",
+            "headline": "PRESS: Russian cbank to buy 3.3 bln rbl of Microsoft products"
+          },
+          {
+            "summary": "In a journey where ICT is making a strong impact towards globalization, digital transformation is the fuel to fire the engine. Avian Technologies (Pvt.) Ltd has taken the leadership to diversify its business in digital space. The event was ...",
+            "publication-date": "2017-03-27",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 551,
+            "id": "SLDAIM0020170327ed3r0003s",
+            "source": {
+              "code": "sldaim",
+              "content": "Daily Mirror (Sri Lanka)"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=SLDAIM0020170327ed3r0003s",
+            "headline": "Avian Technologies concludes Corporate Night 2017"
+          },
+          {
+            "summary": "LINKEDIN is thought to be shifting some or all of its intellectual property to Ireland following Microsoft's $26bn (\u20ac24bn) acquisition of the professional social media platform.",
+            "publication-date": "2017-03-27",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 383,
+            "id": "IINM000020170327ed3r0002x",
+            "source": {
+              "code": "iinm",
+              "content": "Irish Independent"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=IINM000020170327ed3r0002x",
+            "headline": "LinkedIn eyes Ireland IP move after Microsoft's \u20ac24bn takeover"
+          },
+          {
+            "summary": "Lawyers representing three complainants allege hundreds of thousands of people have been affected by problems with upgradeMicrosoft is being sued by three people who claim a Windows 10 update destroyed their data and damaged their ...",
+            "publication-time": "17:06:00-0500",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 395,
+            "id": "INDOP00020170326ed3q004v1",
+            "source": {
+              "code": "indop",
+              "content": "Independent Online"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=INDOP00020170326ed3q004v1",
+            "headline": "Microsoft taken to court because Windows 10 update 'destroyed people's data and damaged PCs'"
+          },
+          {
+            "summary": "Lawyers representing three complainants allege hundreds of thousands of people have been affected by problems with upgradeMicrosoft is being sued by three people who claim a Windows 10 update destroyed their data and damaged their ...",
+            "publication-time": "17:06:00-0500",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 396,
+            "id": "INDOP00020170326ed3q004sa",
+            "source": {
+              "code": "indop",
+              "content": "Independent Online"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=INDOP00020170326ed3q004sa",
+            "headline": "Microsoft taken to court because Windows 10 update 'destroyed people's data and damaged PCs'"
+          },
+          {
+            "summary": "XBOX ONE news includes a big Games with Gold April 2017 update, more PS4 Pro and Project Scorpio reveals, as well as the latest on Call of Duty WW2.",
+            "publication-time": "15:00:00-0500",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 869,
+            "id": "EXCO000020170326ed3q004v2",
+            "source": {
+              "code": "exco",
+              "content": "express.co.uk"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=EXCO000020170326ed3q004v2",
+            "headline": "Xbox One news: Games with Gold April 2017 update, Call of Duty WW2 reveal, PS4 Pro rivalry"
+          },
+          {
+            "summary": "MICROSOFT'S new Xbox Project Scorpio console could cost a small fortune based on these latest 4K specs to finally rival Sony's PS4 Pro.Microsoft",
+            "publication-time": "14:30:00-0500",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 787,
+            "id": "DAICO00020170326ed3q0053e",
+            "source": {
+              "code": "daico",
+              "content": "dailystar.co.uk"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=DAICO00020170326ed3q0053e",
+            "headline": "Microsoft\u2019s Xbox Project Scorpio could be \u2018a $700\u2019 console with 4K Specs to rival PS4 Pro"
+          },
+          {
+            "summary": "DUBAI, 26th March, 2017 (WAM) -- Lieutenant General Dhahi Khalfan Tamim, Deputy Chairman of Police and General Security in Dubai, Chairman of Hamdan Bin Mohammed Smart University\u2019s (HBMSU) Board of Governors, and Chairman of the Emirates ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 494,
+            "id": "EMNEAG0020170326ed3q000p6",
+            "source": {
+              "code": "emneag",
+              "content": "Emirates News Agency (WAM)"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=EMNEAG0020170326ed3q000p6",
+            "headline": "Emirates Talent Association awards Emirati Programmer certificates to 99 youths"
+          },
+          {
+            "summary": "Microsoft Gulf today announced the availability of Learning Tools in Arabic language. The tools designed for students with unique learning needs will now be available in Word Online and OneNote Online, creating Immersive reading features ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 350,
+            "id": "ALBAWA0020170326ed3q000bh",
+            "source": {
+              "code": "albawa",
+              "content": "Al-Bawaba News"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=ALBAWA0020170326ed3q000bh",
+            "headline": "Microsoft announces availability of New Assistive learning tools in Arabic"
+          },
+          {
+            "summary": "American financial magazine Barron's has listed the name of HDFC Bank managing director Aditya Puri's name in its list of world's 30 best CEOs. The 66-year-old holds 23rd position in the list beating social media giant Facebook's CEO Mark ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 402,
+            "id": "AIWFIE0020170326ed3q000ba",
+            "source": {
+              "code": "aiwfie",
+              "content": "Financial Express"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=AIWFIE0020170326ed3q000ba",
+            "headline": "At 23rd spot, HDFC Bank MD Aditya Puri beats Facebook\u2019s Mark Zuckerberg in Barron\u2019s 30 best CEO\u2019s list"
+          },
+          {
+            "summary": "A new patent has been unearthed that suggests that Microsoft is working on the rumoured Surface phone with a foldable display. Twitter user WalkingCat tweeted a link to a patent from the tech giant for a clam-shell hinge device.The ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 403,
+            "id": "AIWINE0020170326ed3q000eg",
+            "source": {
+              "code": "aiwine",
+              "content": "Indian Express"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=AIWINE0020170326ed3q000eg",
+            "headline": "Microsoft\u2019s new patent hints at Surface Phone with foldable screen"
+          },
+          {
+            "summary": "Employee POV: My boss told me the HR department contacted him about my profile picture on LinkedIn. Apparently, they were looking at all employee profiles to make sure they looked \"appropriate.\" They're doing a lot of hiring right now, and ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 753,
+            "id": "DAIL000020170326ed3q00026",
+            "source": {
+              "code": "dail",
+              "content": "Daily Press"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=DAIL000020170326ed3q00026",
+            "headline": "Profile photo fail; Should boss pressure employee to change goofy LinkedIn picture? WORKPLACE REFEREE"
+          },
+          {
+            "summary": "Employee POV: My boss told me the HR department contacted him about my profile picture on LinkedIn. Apparently, they were looking at all employee profiles to make sure they looked \"appropriate.\" They're doing a lot of hiring right now, and ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 753,
+            "id": "FLSS000020170326ed3q0003d",
+            "source": {
+              "code": "flss",
+              "content": "South Florida Sun-Sentinel"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=FLSS000020170326ed3q0003d",
+            "headline": "Profile photo fail; Should boss pressure employee to change goofy LinkedIn picture? WORKPLACE REFEREE"
+          },
+          {
+            "summary": "More businesses are using LinkedIn as their primary or sole job-posting site.So you want a new job? If you're like more than 450million others on the planet, you're going to turn to LinkedIn. More and more businesses are using LinkedIn as ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 768,
+            "id": "GBPG000020170326ed3q00046",
+            "source": {
+              "code": "gbpg",
+              "content": "Green Bay Press-Gazette"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=GBPG000020170326ed3q00046",
+            "headline": "How to use LinkedIn to find your dream job; The social network for business can be your secret weapon if you know its best practices"
+          },
+          {
+            "summary": "More businesses are using LinkedIn as their primary or sole job-posting site.So you want a new job? If you're like more than 450million others on the planet, you're going to turn to LinkedIn. More and more businesses are using LinkedIn as ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 768,
+            "id": "LVL0000020170326ed3q0007c",
+            "source": {
+              "code": "lvl",
+              "content": "The Courier-Journal"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=LVL0000020170326ed3q0007c",
+            "headline": "How to use LinkedIn to find your dream job; The social network for business can be your secret weapon if you know its best practices"
+          },
+          {
+            "summary": "More businesses are using LinkedIn as their primary or sole job-posting site.So you want a new job? If you're like more than 450million others on the planet, you're going to turn to LinkedIn. More and more businesses are using LinkedIn as ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 768,
+            "id": "XFTC000020170326ed3q0003g",
+            "source": {
+              "code": "xftc",
+              "content": "Fort Collins Coloradoan"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=XFTC000020170326ed3q0003g",
+            "headline": "How to use LinkedIn to find your dream job; The social network for business can be your secret weapon if you know its best practices"
+          },
+          {
+            "summary": "More businesses are using LinkedIn as their primary or sole job-posting site.So you want a new job? If you're like more than 450million others on the planet, you're going to turn to LinkedIn. More and more businesses are using LinkedIn as ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 768,
+            "id": "RNGZ000020170326ed3q0003o",
+            "source": {
+              "code": "rngz",
+              "content": "Reno Gazette-Journal"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=RNGZ000020170326ed3q0003o",
+            "headline": "How to use LinkedIn to find your dream job; The social network for business can be your secret weapon if you know its best practices"
+          },
+          {
+            "summary": "More businesses are using LinkedIn as their primary or sole job-posting site.So you want a new job? If you're like more than 450million others on the planet, you're going to turn to LinkedIn. More and more businesses are using LinkedIn as ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 768,
+            "id": "DALA000020170326ed3q0003l",
+            "source": {
+              "code": "dala",
+              "content": "The Daily Advertiser"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=DALA000020170326ed3q0003l",
+            "headline": "How to use LinkedIn to find your dream job; The social network for business can be your secret weapon if you know its best practices"
+          },
+          {
+            "summary": "More businesses are using LinkedIn as their primary or sole job-posting site.So you want a new job? If you're like more than 450million others on the planet, you're going to turn to LinkedIn. More and more businesses are using LinkedIn as ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 768,
+            "id": "CLDG000020170326ed3q0000z",
+            "source": {
+              "code": "cldg",
+              "content": "Clarion-Ledger"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=CLDG000020170326ed3q0000z",
+            "headline": "How to use LinkedIn to find your dream job; The social network for business can be your secret weapon if you know its best practices"
+          },
+          {
+            "summary": "More businesses are using LinkedIn as their primary or sole job-posting site.So you want a new job? If you're like more than 450million others on the planet, you're going to turn to LinkedIn. More and more businesses are using LinkedIn as ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 768,
+            "id": "ARGL000020170326ed3q0000p",
+            "source": {
+              "code": "argl",
+              "content": "Argus Leader"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=ARGL000020170326ed3q0000p",
+            "headline": "How to use LinkedIn to find your dream job; The social network for business can be your secret weapon if you know its best practices"
+          },
+          {
+            "summary": "More businesses are using LinkedIn as their primary or sole job-posting site.So you want a new job? If you're like more than 450million others on the planet, you're going to turn to LinkedIn. More and more businesses are using LinkedIn as ...",
+            "publication-date": "2017-03-26",
+            "language": {
+              "code": "en",
+              "content": "English"
+            },
+            "word-count": 768,
+            "id": "DTMD000020170326ed3q0003z",
+            "source": {
+              "code": "dtmd",
+              "content": "The Daily Times"
+            },
+            "view-link": "http://global.factiva.com/en/du/article.asp?namespace=18&accessionno=DTMD000020170326ed3q0003z",
+            "headline": "How to use LinkedIn to find your dream job; The social network for business can be your secret weapon if you know its best practices"
+          }
+        ]
+      },
+      "status": "success"
     },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    },
-    {
-      "title": "IBM, Cognitive Builders Tackle Challanges with Watson",
-      "line21": "ENP Newswire",
-      "line22": "16 March 2017",
-      "line23": "796 words",
-      "line24": "(English)",
-      "line3": "NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment.NEW YORK CITY - IBM (NYSE : IBM) today unveiled five new ways developers and brands are building with Watson, spanning industries like marketing, retail and entertainment."
-    }
-  ]
+    "status": "success"
+  }
 }

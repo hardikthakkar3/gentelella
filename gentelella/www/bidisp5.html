@@ -16,10 +16,10 @@
     <link rel="stylesheet" href="auto-complete.css">
     <script src="auto-complete.js"></script>
     <script>
-        var biServiceURL = "http://viewer.dev.infodesk.com/bi-service/service/json/call/dj_suggestion_company/searchText={searchText}&maxResults=10&filterNewsCoded=true&dataSet=newsCodedAbt&filterADR=false&filterPrivate=true&format=json&suggestContext";//DEV
-        //var biServiceURL = "http://viewer.qa.infodesk.com/bi-service/service/json/call/dj_suggestion_company/searchText={searchText}&maxResults=10&filterNewsCoded=true&dataSet=newsCodedAbt&filterADR=false&filterPrivate=true&format=json&suggestContext";//QA
-        //var biServiceURL = "http://viewer.infodesk.com/bi-service/service/json/call/dj_suggestion_company/searchText={searchText}&maxResults=10&filterNewsCoded=true&dataSet=newsCodedAbt&filterADR=false&filterPrivate=true&format=json&suggestContext";//PRODUCTION
         var biDisplayURL = "http://viewer.dev.infodesk.com/bi-display/";//DEV
+        //var biDisplayURL = "http://viewer.qa.infodesk.com/bi-display/";//QA
+        //var biDisplayURL = "http://192.168.0.6:8080/bi-display/";//Chetan's Local Server
+        //var biDisplayURL = "http://192.168.0.8:8080/bi-display/";//Hardik's Local Server
         var inputField = "<input placeholder='Enter Search Query' name='biDisplaySearchQuery' id='searchQuery' onkeyup='searchQueryChange(this)'/>";
         document.getElementById("searchFieldContainer").innerHTML = inputField;
         function searchQueryChange(element) {

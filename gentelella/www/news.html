@@ -22,12 +22,12 @@
               var biDisplayURL = "";//CHETAN'S LOCAL MACHINE
               var url = biDisplayURL + "news.json?page=1";
               $http.get(url).then(function(response) {
-                  $scope.news = response.data.data;
+                  $scope.news = response.data["company-response"]["news-headlines"].results.result;
+                  $scope.totalResults = response.data["company-response"]["news-headlines"].search.hits;
                   $scope.dataAvailable = true;
               });
               $scope.page = 1;
               $scope.maxPage = 4;
-              $scope.totalResults = 100;
               $(".paginationCustom li").click(function () {
                   $(".paginationCustom li").removeClass("active")
 
@@ -178,13 +178,13 @@
                           <td>
                             <table>
                               <tr style="font-size: 14px;font-weight: bold;"><td style="padding-bottom: 3px;">
-                                <a href="https://www.google.com" target="_blank">{{article.title}}</a>
+                                <a href="https://www.google.com" target="_blank">{{article.headline}}</a>
                               </td></tr>
                               <tr style="font-size: 12px;"><td style="padding-bottom: 3px;">
-                                {{article.line21}} <span style="color: #0d9061">/</span> {{article.line22}} <span style="color: #0d9061">/</span> {{article.line23}} <span style="color: #0d9061">/</span> {{article.line24}}
+                                {{article.source.content}} <span style="color: #0d9061">/</span> {{article["publication-date"]}} <span style="color: #0d9061">/</span> {{article["word-count"]}} words <span style="color: #0d9061">/</span> ({{article.language.content}})
                               </td></tr>
                               <tr style="font-size: 13px;"><td class="newsDescription">
-                                {{article.line3}}
+                                {{article.summary}}
                               </td></tr>
                             </table>
                           </td>
